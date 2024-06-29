@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Payment-Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function displayPrice() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const price = urlParams.get('price');
+            const quantity = urlParams.get('quantity');
+            if (price && quantity) {
+                const totalPrice = price * quantity;
+                document.getElementById('product-price').innerText = `Product Price: $${price} x ${quantity} = $${totalPrice}`;
+            }
+        }
+        window.onload = displayPrice;
+    </script>
+</head>
+<body>
+    <div id="product-price"></div>
+<html lang="en"> 
+
+<head> 
+	<meta charset="UTF-8"> 
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0"> 
+	<title>Online Payment-Page</title> 
+	<link rel="stylesheet" href="style.css"> 
+</head> 
+
+<body> 
+	<div class="container"> 
+
+		<form action="#"> 
+
+			<div class="row"> 
+
+				<div class="col"> 
+					<h3 class="title"> 
+						Billing Address 
+					</h3> 
+
+					<div class="inputBox"> 
+						<label for="name"> 
+							Full Name: 
+						</label> 
+						<input type="text" id="name"
+							placeholder="Enter your full name"
+							required> 
+					</div> 
+
+					<div class="inputBox"> 
+						<label for="email"> 
+							Email: 
+						</label> 
+						<input type="text" id="email"
+							placeholder="Enter email address"
+							required> 
+					</div>  
+
+				</div> 
+				<div class="col"> 
+					<h3 class="title">Payment</h3> 
+
+					<div class="inputBox"> 
+						<label for="name"> 
+							UPI Payment 
+						</label> 
+						<img src="./images/qrrrrrrrrrrrrrrr.jpg"
+							alt="credit/debit card image"> 
+					</div>   
+
+					<div class="inputBox"> 
+						<label for="price"> 
+							Product Price: 
+						</label> 
+						<input type="text" id="price"
+							placeholder="Product price"
+							readonly> 
+					</div>  
+
+                    <div class="inputBox"> 
+						<label for="quantity"> 
+							Quantity: 
+						</label> 
+						<input type="number" id="quantity"
+							placeholder="Quantity"
+							onchange="updatePrice()"
+							required> 
+					</div>  
+
+                    <div class="inputBox"> 
+						<label for="transaction-id"> 
+							Transaction ID: 
+						</label> 
+						<input type="text" id="transaction-id"
+							placeholder="Enter transaction ID"
+							required> 
+					</div>  
+
+				</div> 
+
+			</div> 
+            <div class="submit-button-container">
+				<button type="submit">Submit</button>
+			</div>
+		</form> 
+
+	</div> 
+	<script type="text/javascript" src="index.js"></script> 
+	<script type="text/javascript">
+		// Get the price and quantity from the URL parameters
+		const urlParams = new URLSearchParams(window.location.search);
+		const price = urlParams.get('price');
+		const quantity = urlParams.get('quantity');
+		// Set the price and quantity input field values
+		if (price && quantity) {
+			document.getElementById('price').value = `$${price}`;
+			document.getElementById('quantity').value = quantity;
+		}
+
+		// Update the price when quantity changes
+		function updatePrice() {
+			const newQuantity = document.getElementById('quantity').value;
+			if (price && newQuantity) {
+				const newTotalPrice = price * newQuantity;
+				document.getElementById('price').value = `$${newTotalPrice}`;
+				document.getElementById('product-price').innerText = `Product Price: $${price} x ${newQuantity} = $${newTotalPrice}`;
+			}
+		}
+	</script>
+</body> 
+
+</html>

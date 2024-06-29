@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap'); 
+
+* { 
+	margin: 0; 
+	padding: 0; 
+	box-sizing: border-box; 
+	border: none; 
+	outline: none; 
+	font-family: 'Poppins', sans-serif; 
+	text-transform: capitalize; 
+	transition: all 0.2s linear; 
+} 
+
+.container { 
+	display: flex; 
+	justify-content: center; 
+	align-items: center; 
+	min-height: 100vh; 
+	padding: 25px; 
+	background: #d6eef1; 
+} 
+
+.container form { 
+	width: 700px; 
+	padding: 20px; 
+	background: #fff; 
+	box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2); 
+	border-radius: 10px;
+} 
+
+.container form .row { 
+	display: flex; 
+	flex-wrap: wrap; 
+	gap: 15px; 
+} 
+
+.container form .row .col { 
+	flex: 1 1 250px; 
+} 
+
+.col .title { 
+	font-size: 20px; 
+	color: rgb(237, 55, 23); 
+	padding-bottom: 5px; 
+} 
+
+.col .inputBox { 
+	margin: 10px; 
+} 
+
+.col .inputBox label { 
+	margin-bottom: 10px; 
+	display: block; 
+	font-weight: bold;
+	color: #333;
+}
+
+.col .inputBox1 label { 
+	margin-bottom: 10px;
+    margin-left: 35%; 
+	display: block; 
+	font-weight: bold;
+	color: #333;
+} 
+
+.col .inputBox input, 
+.col .inputBox select { 
+	width: 100%; 
+	border: 1px solid #ccc; 
+	padding: 10px 15px; 
+	font-size: 15px; 
+	border-radius: 5px;
+} 
+
+.col .inputBox input:focus, 
+.col .inputBox select:focus { 
+	border: 1px solid #000; 
+} 
+
+.col .flex { 
+	display: flex; 
+	gap: 15px; 
+} 
+
+.col .flex .inputBox { 
+	flex: 1 1; 
+	margin-top: 5px; 
+} 
+
+.col .inputBox img { 
+	height: 340px; 
+	margin-top: 5px; 
+	filter: drop-shadow(0 0 1px #000); 
+	border-radius: 10px;
+} 
+.submit-button-container button {
+    background-color: #4CAF50; /* Green background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 15px 32px; /* Some padding */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Get the element to line up correctly */
+    font-size: 16px; /* Increase font size */
+    margin: 4px 2px;
+	margin-left: 40%; /* Some margin */
+    cursor: pointer; /* Pointer/hand icon */
+    border-radius: 12px; /* Rounded corners */
+}
+
+.submit-button-container button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+input::-webkit-inner-spin-button, 
+input::-webkit-outer-spin-button { 
+	display: none; 
+}
